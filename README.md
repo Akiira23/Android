@@ -72,3 +72,8 @@ Esse é um curso completo (tendo mais de 100 horas de vídeos) que te transforma
 - Ifood: produtos, filtro empresas, carrinho de compras, pedidos
 - Consumo serviço web: rest, restfull, threads, json, retrofit, post, put, patch e delete, API do Youtube
 - Flappy Bird: desenvolvimento de jogos, imagens e textos, animações, sons
+
+
+### Android Studio 3.5
+### Pixel API 28
+### Android 9.0
