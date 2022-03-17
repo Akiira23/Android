@@ -50,7 +50,7 @@
         android:layout_marginLeft="20dp"
         android:layout_marginTop="80dp"
         android:ems="10"
-        android:inputType="textPersonName"
+        android:inputType="number"
         android:text="0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/viewResultado" />
@@ -61,7 +61,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="1dp"
         android:ems="10"
-        android:inputType="textPersonName"
+        android:inputType="number"
         android:text="0"
         app:layout_constraintStart_toStartOf="@+id/textView3"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
