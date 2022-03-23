@@ -11,10 +11,13 @@ import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
 
+    int contVit = 0, contEmp = 0, contDer = 0;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
     }
 
     public void selecionadoPedra(View view) {
@@ -52,19 +55,33 @@ public class MainActivity extends AppCompatActivity {
         }
 
         TextView textResultado = findViewById(R.id.resultadoJogo);
-        if(
+        if (
                 (opcaoApp == "pedra" && opcaoSelecionada == "tesoura") ||
-                (opcaoApp == "papel" && opcaoSelecionada == "pedra") ||
-                (opcaoApp == "tesoura" && opcaoSelecionada == "papel")
-        )
+                        (opcaoApp == "papel" && opcaoSelecionada == "pedra") ||
+                        (opcaoApp == "tesoura" && opcaoSelecionada == "papel")
+        ) {
+            contDer++;
             textResultado.setText("Jogador Perdeu!");
-        else if(
+            System.out.println("derrota");
+        } else if (
                 (opcaoSelecionada == "pedra" && opcaoApp == "tesoura") ||
-                (opcaoSelecionada == "papel" && opcaoApp == "pedra") ||
-                (opcaoSelecionada == "tesoura" && opcaoApp == "papel")
-        )
+                        (opcaoSelecionada == "papel" && opcaoApp == "pedra") ||
+                        (opcaoSelecionada == "tesoura" && opcaoApp == "papel")
+        ) {
+            contVit++;
             textResultado.setText("Jogador Ganhou!");
-        else
+            System.out.println("vitoria");
+        } else {
+            contEmp++;
             textResultado.setText("Empate!");
+            System.out.println("empate");
+        }
+        TextView vitorias = findViewById(R.id.contVitorias);
+        TextView empates = findViewById(R.id.contEmpates);
+        TextView derrotas = findViewById(R.id.contDerrotas);
+        System.out.println("depois textview");
+        vitorias.setText("" + contVit);
+        empates.setText("" + contEmp);
+        derrotas.setText("" + contDer);
     }
 }
