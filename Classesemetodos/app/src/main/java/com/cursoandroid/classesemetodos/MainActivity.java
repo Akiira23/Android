@@ -37,5 +37,13 @@ public class MainActivity extends AppCompatActivity {
         conta.sacar(50);
 
         System.out.println(conta.recupararSaldo());
+
+        Pessoa pessoa = new Pessoa();
+        pessoa.exibirDados("Maria");
+        pessoa.exibirDados("Maria", 12);
+
+        ContaBancaria contaB = new ContaBancaria(100254);
+
+        Obama obama = new Obama();
     }
 }
