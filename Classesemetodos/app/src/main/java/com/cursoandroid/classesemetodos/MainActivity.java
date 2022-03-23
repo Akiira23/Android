@@ -21,5 +21,12 @@ public class MainActivity extends AppCompatActivity {
         funcionario.salario = 1200;
         double salarioRecuperado = funcionario.recuperarSalario(150, 20);
         System.out.println("O salario eh: " + (salarioRecuperado));
+
+        Cao cao = new Cao();
+        cao.correr();
+        cao.latir();
+        cao.setTamanho(30);
+        int caoTam = cao.getTamanho();
+        System.out.println(caoTam);
     }
 }
