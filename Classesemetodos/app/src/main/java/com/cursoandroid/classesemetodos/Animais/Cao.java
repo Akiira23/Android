@@ -1,10 +1,10 @@
-package com.cursoandroid.classesemetodos;
+package com.cursoandroid.classesemetodos.Animais;
 
 public class Cao extends Animal {
-    void latir() {
+    public void latir() {
         System.out.println("Latir como um cachorro.");
     }
-    void correr() {
+    public void correr() {
         super.correr();
         System.out.println("cao.");
     }

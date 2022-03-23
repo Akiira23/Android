@@ -1,4 +1,4 @@
-package com.cursoandroid.classesemetodos;
+package com.cursoandroid.classesemetodos.Animais;
 
 public class Animal {
     private int tamanho;
@@ -27,11 +27,11 @@ public class Animal {
     public int getTamanho() {
         return this.tamanho;
     }
-    void dormir() {
+    public void dormir() {
         System.out.println("Dormir");
     }
 
-    void correr() {
+    public void correr() {
         System.out.println("Correr como um ");
     }
 }

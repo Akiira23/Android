@@ -1,7 +1,7 @@
-package com.cursoandroid.classesemetodos;
+package com.cursoandroid.classesemetodos.Animais;
 
 public class Passaro {
-    void Voar() {
+    public void Voar() {
         System.out.println("Voar como um passaro.");
     }
 }
