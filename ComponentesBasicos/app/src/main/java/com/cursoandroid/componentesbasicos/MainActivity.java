@@ -36,6 +36,8 @@ public class MainActivity extends AppCompatActivity {
         radioMasculino = findViewById(R.id.radioM);
         opcaoSexo = findViewById(R.id.radioGroupSexo);
 
+        radioButton();
+
     }
 
     public void radioButton() {
@@ -82,7 +84,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void enviar(View view) {
-        radioButton();
         /*checkBox();
         String nome = campoNome.getText().toString();
         String email = campoEmail.getText().toString();
