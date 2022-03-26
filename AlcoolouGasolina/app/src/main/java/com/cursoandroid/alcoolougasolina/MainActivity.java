@@ -8,9 +8,11 @@ import android.widget.TextView;
 
 import com.google.android.material.textfield.TextInputEditText;
 
+import java.text.DecimalFormat;
+
 public class MainActivity extends AppCompatActivity {
 
-    private TextInputEditText editPrecoAlcool, editPrecoGasolina;
+    private TextInputEditText editPrecoGasolina;
     private TextView textResultado;
 
     @Override
@@ -18,24 +20,20 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        editPrecoAlcool = findViewById(R.id.editPrecoAlcool);
         editPrecoGasolina = findViewById(R.id.editPrecoGasolina);
         textResultado = findViewById(R.id.resultado);
     }
 
     public void calcularPreco(View view) {
-        String precoAlcool = editPrecoAlcool.getText().toString();
         String precoGasolina = editPrecoGasolina.getText().toString();
 
-        Boolean camposValidados = validarCampos(precoAlcool, precoGasolina);
+        Boolean camposValidados = validarCampos(precoGasolina);
         if (camposValidados) {
-            Double valorAlcool = Double.parseDouble(precoAlcool);
             Double valorGasolina = Double.parseDouble(precoGasolina);
-            if (valorAlcool / valorGasolina >= 0.7) {
-                textResultado.setText("Melhor utilizar gasolina.");
-            } else {
-                textResultado.setText("Melhor Utilizar Alcool");
-            }
+            Double vAlcool = valorGasolina * 0.7;
+            DecimalFormat df = new DecimalFormat("#.000");
+
+            textResultado.setText("Compre Alcool se estiver seu valor estiver a " + df.format(vAlcool));
         } else {
             textResultado.setText("Preencha os valores primeiro.");
         }
@@ -43,11 +41,9 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public boolean validarCampos(String pAlcool, String pGasolina) {
+    public boolean validarCampos(String pGasolina) {
         Boolean camposValidados = true;
-        if (pAlcool == null || pAlcool == "")
-            camposValidados = false;
-        else if (pGasolina == null || pGasolina == "")
+        if (pGasolina == null || pGasolina == "")
             camposValidados = false;
         return camposValidados;
     }
