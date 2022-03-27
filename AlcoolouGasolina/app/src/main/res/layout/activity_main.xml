@@ -36,6 +36,46 @@
             android:text="2.60" />
     </com.google.android.material.textfield.TextInputLayout>
 
+    <CheckBox
+        android:id="@+id/checkBoxCalculo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Calculo avancado de consumo." />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editDesempenhoEtanol"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Desempenho do Etanol (km/L)"
+            android:inputType="numberDecimal"
+            android:text="7" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editDesempenhoGasolina"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Desempenho da Gasolina (km/L)"
+            android:inputType="numberDecimal"
+            android:text="10" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/textRendimento"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="Rendimento em relacao ao etanol."
+        android:textSize="24sp" />
+
     <Button
         android:id="@+id/buttonCalcular"
         android:layout_width="match_parent"
@@ -49,5 +89,7 @@
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
         android:text="Resultado"
-        android:textSize="24sp" />
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
 </LinearLayout>
