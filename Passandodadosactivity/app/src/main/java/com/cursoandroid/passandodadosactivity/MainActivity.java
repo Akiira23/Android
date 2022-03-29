@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import java.io.Serializable;
+
 public class MainActivity extends AppCompatActivity {
 
     private Button buttonEnviar;
@@ -23,10 +25,12 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                 Intent intent = new Intent(getApplicationContext(), SegundaActivity.class);
+                Usuario usuario = new Usuario("Jamelao", "jamel@gamil.com");
 
                 //passar dados
                 intent.putExtra("nome", "Jamelao");
                 intent.putExtra("idade", 30);
+                intent.putExtra("objeto", usuario);
                 startActivity(intent);
             }
         });
