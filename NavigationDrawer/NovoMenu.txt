@@ -1,0 +1,10 @@
+Para criar um novo menu no navigation drawer
+
+1 - adicionar novo <item> no activity_main_drawer.xml
+2 - adicionar o id do novo item no MainActivity.java no mAppBarConfigfuration
+3 - incluir novo pacote para o item e criar um novo fragment(blank)
+4 - em mobile_navigation.xml adicionar o novo <fragment> criado
+
+--------------------- REMOCAO ------------------------------------
+
+5 - para remover um item basta remover os 4 itens anteriores.
