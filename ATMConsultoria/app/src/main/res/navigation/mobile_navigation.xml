@@ -3,35 +3,35 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/nav_home">
+    app:startDestination="@+id/nav_principal">
 
     <fragment
-        android:id="@+id/nav_home"
-        android:name="com.cursoandroid.atmconsultoria.ui.home.HomeFragment"
+        android:id="@+id/nav_principal"
+        android:name="com.cursoandroid.atmconsultoria.ui.principal.Principal"
         android:label="@string/menu_principal"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_principal" />
 
     <fragment
-        android:id="@+id/nav_gallery"
-        android:name="com.cursoandroid.atmconsultoria.ui.gallery.GalleryFragment"
+        android:id="@+id/nav_servicos"
+        android:name="com.cursoandroid.atmconsultoria.ui.servicos.Servicos"
         android:label="@string/menu_servicos"
-        tools:layout="@layout/fragment_gallery" />
+        tools:layout="@layout/fragment_servicos" />
 
     <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="com.cursoandroid.atmconsultoria.ui.slideshow.SlideshowFragment"
+        android:id="@+id/nav_clientes"
+        android:name="com.cursoandroid.atmconsultoria.ui.clientes.Clientes"
         android:label="@string/menu_clientes"
-        tools:layout="@layout/fragment_slideshow" />
+        tools:layout="@layout/fragment_clientes" />
 
     <fragment
-        android:id="@+id/nav_share"
-        android:name="com.cursoandroid.atmconsultoria.ui.share.ShareFragment"
+        android:id="@+id/nav_contato"
+        android:name="com.cursoandroid.atmconsultoria.ui.contato.Contato"
         android:label="@string/menu_contato"
-        tools:layout="@layout/fragment_share" />
+        tools:layout="@layout/fragment_contato" />
 
     <fragment
-        android:id="@+id/nav_send"
-        android:name="com.cursoandroid.atmconsultoria.ui.send.SendFragment"
+        android:id="@+id/nav_sobre"
+        android:name="com.cursoandroid.atmconsultoria.ui.sobre.Sobre"
         android:label="@string/menu_sobre"
-        tools:layout="@layout/fragment_send" />
+        tools:layout="@layout/fragment_sobre" />
 </navigation>
