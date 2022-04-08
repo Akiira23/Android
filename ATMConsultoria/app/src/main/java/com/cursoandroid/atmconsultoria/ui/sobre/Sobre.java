@@ -53,7 +53,7 @@ public class Sobre extends Fragment {
                .addPlayStore("com.facebook.katana", "Download App")
 
                .addItem(versao)
-               
+
                 .create();
     }
 
